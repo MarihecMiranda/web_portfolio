@@ -1,0 +1,154 @@
+/*.welcome_section{
+    flex-direction: row;
+    display: flex;
+}
+
+.text_welcome{
+    flex-direction: column;
+    display: flex;
+    width: 50%;
+    margin-left: 6%;
+}
+
+.title_wcm{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1;
+    margin: 0;
+    padding-top: 70px;
+}
+
+.text_wcm{
+    font-size: 25px;
+    color: #333333;
+    text-align: left;
+    line-height:1.2;
+    padding-bottom: 70px;
+}
+
+.img_welcome{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_img_bg{
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    background-color: #50C878;
+    
+}
+
+.img_circle{
+    width: 375px;
+    height: 375px;
+    background-image: url("../../../public/img_welcome.png");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+
+}
+
+@media (max-width:768px)  {
+
+}*/
+
+.welcome_section{
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap:5px;
+    grid-template-areas: 
+    "title-wcm img_wcm"
+    "text-wcm img_wcm";
+}
+
+.title_wcm{
+    grid-area: title-wcm;
+}
+
+.title_wcm p{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1;
+    margin: 0;
+    padding-top: 70px;
+    margin-left: 8%;
+}
+
+.text_wcm{
+    grid-area: text-wcm;
+}
+
+.text_wcm p{
+    font-size: 25px;
+    color: #333333;
+    text-align: left;
+    line-height:1.2;
+    padding-bottom: 80px;
+    margin-left: 8%;
+}
+
+.img_welcome{
+    grid-area: img_wcm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle_img_bg{
+    border-radius: 50%;
+    width: 420px;
+    height: 420px;
+    background-color: #50C878;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+.img_circle{
+    width: 390px;
+    height: 390px;
+    background-image: url("../../assets/img_welcome.png");
+    background-size: cover;
+    background-repeat: no-repeat, repeat;
+}
+
+@media (max-width:768px)  {
+
+    .welcome_section{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title-wcm"
+        "img_wcm"
+        "text-wcm";
+    }
+
+    .title_wcm p{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .text_wcm p{
+        font-size: 20px;
+        text-align: justify;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-bottom: 20px;
+    }
+
+    .circle_img_bg{
+        width: 330px;
+        height: 330px;
+        margin-top: 20px;
+    }
+
+    .img_circle{
+        width: 310px;
+        height: 310px;
+    }
+}

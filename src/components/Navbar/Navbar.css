@@ -1,0 +1,137 @@
+.Navbar{
+    padding-left: 3%;
+    padding-right: 3%;
+    background-color: #50C878;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 60px;
+    grid-template-areas: 
+    "logo . items items";
+}
+
+.nav_logo{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: auto;
+}
+
+.nav_logo a{
+    color: white;
+    text-decoration: none;
+    font-family:'Bebas Neue';
+    font-size: 36px;
+}
+
+.nav_items{
+    grid-area: items;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav_items a{
+    color: white;
+    text-decoration: none;
+    font-family:'Bebas Neue';
+    font-size: 20px;
+    padding: 20px;
+}
+
+.nav_items a:hover{
+    transform: scale(1.1);
+}
+
+.nav_items a::after{
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #FFD700;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform .25s;
+}
+
+
+.nav_items a:hover::after{
+    transform: scale(1,1);
+}
+
+@media (max-width:768px)  {
+
+    .navbar{
+        height: 60px;
+        top: 0;
+    }
+
+    .nav_logo{
+        width: 30%;
+        padding-top: 2rem;
+        margin-left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_items{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: -webkit-fill-available; 
+        transform: translateX(-100%);  
+        transition: 0.3s ease all;
+        background-color: #333333;
+    }
+
+    .nav_items a{
+        margin: 15px;
+        padding: .75rem;
+        color: #FFF;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 40px;
+    }
+
+    .nav_items a:hover{
+        transform: scale(1.1);
+
+    }
+
+    .nav_items.open{
+        transform: translateX(0);
+    }
+
+    .nav_toggle {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .nav_toggle span {
+        width: 30px;
+        height: 4px;
+        background: white;
+        border-radius: 2px;
+        margin-bottom: 5px;
+        transform-origin: 5px 0px;
+        transition: all 0.2s linear;
+    }
+
+    .nav_toggle.open > span{
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .nav_toggle.nav_toggle.open > span:nth-child(2){
+        display: none;
+    }
+    
+    .nav_toggle.nav_toggle.open > span:nth-child(3){
+        transform: rotate(-45deg) translate(-5px, 1px);
+    }
+
+}

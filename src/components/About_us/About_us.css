@@ -1,0 +1,244 @@
+.phil_know_us{
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-areas: 
+    "img_ku title_ku"
+    "img_ku text_ku";
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.phil_img_ku{
+    grid-area: img_ku;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phil_img_ku img{
+    width: 450px;
+    height: 300px;
+
+}
+
+.phil_title_ku{
+    grid-area: title_ku;
+}
+
+.phil_title{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 1; 
+    margin: 0;
+    padding: 0;
+}
+
+.phil_text_ku{
+    grid-area: text_ku;
+}
+
+.phil_text{
+    font-size: 25px;
+    color: #333333;
+    text-align: left;
+    line-height:1.2;
+    padding-right: 50px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+.phil_mission{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+.phill_img_mis{
+    display: flex;
+    width: 45%;
+    height: 350px;
+    background-image: url("../../assets/about_us/mission.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    margin-left: 50px;
+}
+
+.content_text_mis{
+    display: flex;
+    align-items: center;
+    position: absolute;  
+    flex-direction: column;  
+    width: 55%;
+    height: 300px;
+    background-color: rgba(21,150,64,0.8);
+    left: 40%;
+    margin-bottom: 10px;
+    box-shadow: 20px 20px 5px 2px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 20px 20px 5px 2px rgba(0,0,0,0.58);
+    -moz-box-shadow: 20px 20px 5px 2px rgba(0,0,0,0.58);
+}
+
+.phil_title_mis p{
+    color: #FFFFFF;
+    text-align: center;
+    padding:10px;
+}
+
+.phil_text_mis p{
+    color: #FFFFFF;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.phil_vision{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 93%;
+    margin-bottom: 80px;
+    margin-left: 50px;
+}
+
+.content_text_vis{
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   align-items: center;
+   width: 55%;
+   height: 300px;
+   background-color: rgba(21,150,64,0.8);
+   margin-bottom: 10px;
+   box-shadow: -19px 18px 5px 2px rgba(0,0,0,0.58);
+   -webkit-box-shadow: -19px 18px 5px 2px rgba(0,0,0,0.58);
+   -moz-box-shadow: -19px 18px 5px 2px rgba(0,0,0,0.58);
+   margin-left: 20px;
+}
+
+.phil_img_vis{
+    display: flex;
+    width: 45%;
+    height: 350px;
+    background-image: url("../../assets/about_us/vision.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    margin-left: 55%;
+}
+
+.phil_title_vis p{
+    color: #FFFFFF;
+    text-align: center;
+    padding:10px;
+}
+
+.phil_text_vis p{
+    color: #FFFFFF;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width:768px)  {
+    .phil_know_us{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "title_ku"
+        "img_ku"
+        "text_ku";
+        margin-top: 20px;
+        margin-bottom: 20px;
+    } 
+
+    .phil_img_ku img{
+        width: 90%;
+        height: 250px;
+        margin-top: 20px;
+    }
+
+    .phil_title{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .phil_text{
+        font-size: 20px;
+        text-align: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .phil_mission{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .phill_img_mis{
+        width: 100%;
+        height: 300px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    .content_text_mis{ 
+        width: 60%;
+        height: 350px;
+        left: 5%;
+    }
+
+    .phil_title_mis p{
+        padding:0px;
+    }
+    
+    .phil_text_mis p{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+
+    .phil_vision{
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 80px;
+        margin-left: 0;
+    }
+    
+    .content_text_vis{
+       width: 60%;
+       height: 350px;
+       margin-left: 35%;
+    }
+    
+    .phil_img_vis{
+        width: 100%;
+        height: 300px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 0;
+    }
+    
+    .phil_title_vis p{
+        padding:0;
+    }
+    
+    .phil_text_vis p{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 15px;
+    }
+    
+}
