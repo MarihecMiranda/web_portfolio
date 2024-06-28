@@ -1,11 +1,11 @@
 import React from "react";
 import './Presentation.css'
 import { useNavigate }    from "react-router-dom"
+import {assignment} from "../../data/assignment"
 import img from "../../assets/img_know_us.png"
-import img1 from '../../assets/infographics/img3.jpg'
-import img2 from '../../assets/infographics/img4.jpg'
 
 const Presentation = () => {
+    
     const navigate = useNavigate();
 
     const onClick = ()=>{
@@ -44,32 +44,16 @@ const Presentation = () => {
                 <div className="ps_jobs_images">
                     <div class="image-container1">
                         <div class="image-strip" id="imageStrip">
-                            <img src={img1} alt="Imagen 1"/>
-                            <img src={img2} alt="Imagen 2"/>
-                            <img src={img1} alt="Imagen 3"/>
-                            <img src={img2} alt="Imagen 4"/>
-                            <img src={img1} alt="Imagen 5"/>
-
-                            <img src={img2} alt="Imagen 1"/>
-                            <img src={img1} alt="Imagen 2"/>
-                            <img src={img2} alt="Imagen 3"/>
-                            <img src={img1} alt="Imagen 4"/>
-                            <img src={img2} alt="Imagen 5"/>
+                        {assignment.map((data)=>(
+                            <img src={data.url_img}/>
+                        ))}
                         </div>
                     </div>
                     <div class="image-container2">
                         <div class="image-strip" id="imageStrip">
-                            <img src={img1} alt="Imagen 1"/>
-                            <img src={img2} alt="Imagen 2"/>
-                            <img src={img1} alt="Imagen 3"/>
-                            <img src={img2} alt="Imagen 4"/>
-                            <img src={img1} alt="Imagen 5"/>
-
-                            <img src={img2} alt="Imagen 1"/>
-                            <img src={img1} alt="Imagen 2"/>
-                            <img src={img2} alt="Imagen 3"/>
-                            <img src={img1} alt="Imagen 4"/>
-                            <img src={img2} alt="Imagen 5"/>
+                        {assignment.map((data)=>(
+                            <img src={data.url_img}/>
+                        ))}
                         </div>
                     </div>
                     <div className="ps_jobs_title_small">
