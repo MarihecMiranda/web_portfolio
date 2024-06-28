@@ -1,0 +1,147 @@
+.Content_details_project{
+}
+
+.details_p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "img_project Details_project";
+}
+
+.img_infographic{
+    grid-area: img_project;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(21,150,64,0.8);
+    border-radius: 20px;
+
+}
+
+.img_infographic img{
+    width: 200px;
+    height: 430px;
+}
+
+.img_project{
+    grid-area: img_project;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(21,150,64,0.8);
+    border-radius: 20px;
+}
+
+.img_project img{
+    width: 300px;
+    height: 400px;
+}
+
+.Details_project{
+    grid-area: Details_project;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.desc{
+    font-size: 20px;
+    color: #333333;
+    text-align: left;
+}
+
+.members{
+    font-size: 20px;
+    color: #333333;
+    text-align: left;
+}
+
+.btn_project{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+}
+
+.button_green{
+    width: 160px;
+    background-color: #159640;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@media (max-width:768px)  {
+
+    .details_p{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "img_project"
+        "Details_project";
+    }
+    
+    .img_infographic{
+        width: 80%;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(21,150,64,0.8);
+        border-radius: 20px;
+    
+    }
+    
+    .img_infographic img{
+        width: 150px;
+        height: 330px;
+    }
+
+    .img_project{
+        width: 80%;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(21,150,64,0.8);
+        border-radius: 20px;
+    
+    }
+    
+    .img_project img{
+        width: 150px;
+        height: 230px;
+    }
+    
+    .Details_project{
+        width: 80%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .name{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    
+    .desc{
+        font-size: 10px;
+    }
+    
+    .members{
+        font-size: 10px;
+    }
+    
+    .btn_project{
+        padding-left: 0;
+    }
+
+    .button_green{
+        font-size: 10px;
+        margin-right: 10px;
+    }
+}

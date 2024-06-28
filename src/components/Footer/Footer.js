@@ -26,10 +26,10 @@ const Footer = ({active}) =>{
                         }`}> Contactanos </a> 
             </div>
             <div className="contact">
-                <a href="/" className="green"> Contactanos </a>  
-                <a href="/nosotros"> Facebook </a>   
-                <a href="/paquetes"> Instagram </a> 
-                <a href="/hospedaje"> WhatsApp </a>  
+                <a href=" " className="green"> Contactanos </a>  
+                <a href="https://facebook.com/"> Facebook </a>   
+                <a href="https://www.instagram.com/"> Instagram </a> 
+                <a href=" "> WhatsApp </a>  
             </div>
             <div className="socials">
                 <a href="socials" className="green"> Social </a> 
